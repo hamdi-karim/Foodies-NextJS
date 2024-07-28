@@ -6,6 +6,7 @@ import { Suspense } from "react";
 import classes from "./page.module.css";
 
 async function Meals() {
+  console.log("Fetching meals");
   const meals = await getMeals();
 
   return <MealsGrid meals={meals} />;
