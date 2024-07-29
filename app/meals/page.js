@@ -5,8 +5,13 @@ import { Suspense } from "react";
 
 import classes from "./page.module.css";
 
+export const metadata = {
+  title: "All Meals",
+  description:
+    "Dive through the variant meals shared by our vibrant community.",
+};
+
 async function Meals() {
-  console.log("Fetching meals");
   const meals = await getMeals();
 
   return <MealsGrid meals={meals} />;
